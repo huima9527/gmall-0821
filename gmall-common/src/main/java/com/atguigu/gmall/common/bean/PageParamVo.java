@@ -28,7 +28,6 @@ public class PageParamVo {
     private String key;
 
     public <T> IPage<T> getPage(){
-
         return new Page<>(pageNum, pageSize);
     }
 }
