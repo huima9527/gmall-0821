@@ -1,0 +1,30 @@
+server:
+  port: 18087
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    base-url: http://localhost:9411
+    discovery-client-enabled: false
+    sender:
+      type: web
+  thymeleaf:
+    cache: false
+  redis:
+    host: 192.168.137.22
+feign:
+  sentinel:
+    enabled: true
+logging:
+  level:
+    com.atguigu.gmall: debug
