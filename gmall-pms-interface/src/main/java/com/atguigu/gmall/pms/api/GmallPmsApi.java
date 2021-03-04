@@ -20,6 +20,9 @@ public interface GmallPmsApi {
     @GetMapping("pms/sku/spu/{pid}")
     public ResponseVo<List<SkuEntity>> querySkusBySpuId(@PathVariable("pid") Long pid);
 
+    @GetMapping("pms/sku/{id}")
+    public ResponseVo<SkuEntity> querySkuById(@PathVariable("id") Long id);
+
     @GetMapping("pms/brand/{id}")
     public ResponseVo<BrandEntity> queryBrandById(@PathVariable("id") Long id);
 
